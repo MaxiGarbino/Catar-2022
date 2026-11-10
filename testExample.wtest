@@ -1,9 +1,13 @@
-import example.pepita
+import example.*
 
-describe "group of tests for pepita" {
+describe "group of tests for catar 2022" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "el pastelero cata bien" {
+    const juan = new Cocinero(tipo = new Pastelero(nivelDulzor = 10))
+    const platoCinco = new Principal(azucar = 10, bonito = true)
+    const platoDiez = new Postre(cantColores = 1)
+    assert.equals(juan.catar(platoCinco),5)
+    assert.equals(juan.catar(platoDiez),10)
   }
 
 }
